@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --bg: #080c14;
+  --surface: #0d1320;
+  --surface2: #111827;
+  --border: rgba(255,255,255,0.07);
+  --accent: #e879f9;
+  --accent2: #38bdf8;
+  --accent3: #34d399;
+  --text: #f1f5f9;
+  --muted: #64748b;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(232,121,249,0.3); color: #fff; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+/* ── Noise texture overlay ─────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes spin     { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes shimmer  { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes orb1     { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(60px,-40px) scale(1.1)} 66%{transform:translate(-30px,50px) scale(0.95)} }
+@keyframes orb2     { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-50px,60px) scale(0.9)} 66%{transform:translate(40px,-30px) scale(1.05)} }
+@keyframes pulse    { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.05)} }
+@keyframes slideIn  { from{transform:translateX(-100%)} to{transform:translateX(0)} }
+@keyframes glow     { 0%,100%{box-shadow:0 0 20px rgba(232,121,249,0.3)} 50%{box-shadow:0 0 40px rgba(232,121,249,0.6)} }
+
+.fade-up  { animation: fadeUp  0.7s ease both; }
+.fade-in  { animation: fadeIn  0.5s ease both; }
+.floating { animation: float   4s ease-in-out infinite; }
+
+/* ── Glass card ─────────────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+.glass-hover:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(232,121,249,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(232,121,249,0.1);
+}
+
+/* ── Gradient text ──────────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, #e879f9, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-text-2 {
+  background: linear-gradient(135deg, #38bdf8, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Shimmer button ─────────────────────────────────────── */
+.btn-shimmer {
+  background: linear-gradient(90deg, #e879f9, #38bdf8, #e879f9);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ── Skill chip ─────────────────────────────────────────── */
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  cursor: default;
+}
+.skill-chip:hover {
+  background: rgba(232,121,249,0.12);
+  border-color: rgba(232,121,249,0.4);
+  color: #e879f9;
+  transform: translateY(-2px);
+}
+
+/* ── Timeline dot ───────────────────────────────────────── */
+.tl-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: linear-gradient(135deg,#e879f9,#38bdf8);
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(232,121,249,0.6);
+}
+
+/* ── Section reveal ─────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
