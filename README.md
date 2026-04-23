@@ -1,4 +1,4 @@
-# 🚀 Gourav Mishra — Portfolio v3
+# 🚀 Gourav Mishra — Portfolio
 
 A modern, fully responsive personal portfolio built with React + Vite. Features a dark/light theme toggle, smooth scroll-reveal animations, an image carousel for projects, and a working contact form powered by EmailJS.
 
@@ -30,57 +30,15 @@ A modern, fully responsive personal portfolio built with React + Vite. Features 
 
 ---
 
-## 📁 Project Structure
-
-```
-gourav-portfolio-v3/
-├── public/
-│   └── GrandStay1.png          # Project screenshot
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx           # Responsive nav with mobile menu
-│   │   ├── Footer.jsx
-│   │   ├── ScrollToTop.jsx
-│   │   └── ThemeToggle.jsx
-│   ├── sections/
-│   │   ├── Hero.jsx             # Intro, typing animation, social links
-│   │   ├── Skills.jsx           # Skill cards grouped by category
-│   │   ├── Projects.jsx         # Image carousel + project cards
-│   │   ├── Education.jsx        # Timeline-style education cards
-│   │   └── Contact.jsx          # EmailJS contact form
-│   ├── constants/
-│   │   └── data.js              # All content (skills, projects, education)
-│   ├── context/
-│   │   └── ThemeContext.jsx     # Dark/light theme + design tokens (tk)
-│   ├── hooks/
-│   │   └── index.js             # useTyping, useReveal custom hooks
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── postcss.config.js
-```
-
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js v18+
-- npm
-
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/Gouravmishra92/gourav-portfolio-v3.git
+git clone https://github.com/Gouravmishra92/Portfolio.git
 
 # Navigate into the project
-cd gourav-portfolio-v3
+cd Portfolio
 
 # Install dependencies
 npm install
@@ -115,8 +73,8 @@ The contact form uses [EmailJS](https://www.emailjs.com/) to send messages witho
 
 ```js
 await emailjs.send(
-  'YOUR_SERVICE_ID',     // replace service_1ehdqm5
-  'YOUR_TEMPLATE_ID',    // replace template_7o3dpln
+  'YOUR_SERVICE_ID',   
+  'YOUR_TEMPLATE_ID',
   { from_name, from_email, message },
   'YOUR_PUBLIC_KEY'
 );
@@ -174,12 +132,6 @@ The portfolio is deployed on **Vercel**. To deploy your own fork:
 2. Go to [vercel.com](https://vercel.com) → **New Project** → import your repo
 3. Framework preset: **Vite** (auto-detected)
 4. Click **Deploy** — done
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
