@@ -175,6 +175,31 @@ export const PROJECTS = [
     live: "https://grand-stay-suite-cyan.vercel.app",
     repo: "https://github.com/Gouravmishra92/GrandStay-Suite",
   },
+  {
+    id: 3,
+    title: "GrandStay",
+    subtitle: "Full-Stack Travel Listing Web Application",
+    description: "StayHaven is a modern travel listing and booking platform inspired by Airbnb, built with Node.js, Express.js, MongoDB, and EJS. The application allows users to explore destinations, create and manage property listings, upload images, authenticate accounts, and interact through a clean responsive UI focused on smooth travel discovery.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "EJS",
+      "Passport.js",
+    ],
+    category: "Full Stack",
+    accent: "#FF5A5F",
+    images:[
+      "/StayHaven1.png",
+      "/StayHaven2.png",
+      "/StayHaven3.png",
+      "/StayHaven4.png",
+      "/StayHaven5.png",
+    ],
+    live: "https://stayhaven-xr5r.onrender.com",
+    repo: "https://github.com/Gouravmishra92/StayHaven",
+  },
 ];
 
 export const EDUCATION = [
@@ -182,7 +207,6 @@ export const EDUCATION = [
     degree: "B.Tech — Computer Science & Engineering",
     school: "Uka Tarsadia University",
     period: "2023 – 2027",
-    grade: "CGPA: 8.57",
     location: "Bardoli, Gujarat",
     status: "Ongoing",
     desc: "Focused on full-stack web development, data structures, algorithms, and software engineering. Completed multiple MERN stack projects and participated in coding competitions.",
@@ -190,9 +214,8 @@ export const EDUCATION = [
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
-    school: "Gujarat Board of Education",
+    school: "Deacons Foundation Higher Secondary School",
     period: "2021 – 2023",
-    grade: "82%",
     location: "Surat, Gujarat",
     status: "Completed",
     desc: "Science stream with Physics, Chemistry and Mathematics. Developed strong analytical thinking and problem-solving foundations that fuel my engineering mindset.",

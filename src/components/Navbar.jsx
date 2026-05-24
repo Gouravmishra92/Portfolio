@@ -41,7 +41,7 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="/Gourav_Mishra_Resume.pdf" target="_blank" rel="noreferrer"
+            <a href="/Gourav_Mishra_Resume2.pdf" target="_blank" rel="noreferrer"
               style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: 14, color: '#fff', textDecoration: 'none', padding: '8px 20px', borderRadius: 8, background: 'linear-gradient(135deg,#e879f9,#38bdf8)', marginLeft: 8, transition: 'opacity 0.2s' }}
               onMouseEnter={e => e.currentTarget.style.opacity = '0.85'} onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
               Resume
@@ -68,7 +68,7 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="/Gourav_Mishra_Resume.pdf" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}
+            <a href="/Gourav_Mishra_Resume2.pdf" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}
               style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: 15, color: '#e879f9', textDecoration: 'none', padding: '12px 0', marginTop: 4 }}>
               ↗ View Resume
             </a>
