@@ -177,7 +177,7 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "GrandStay",
+    title: "StayHaven",
     subtitle: "Full-Stack Travel Listing Web Application",
     description: "StayHaven is a modern travel listing and booking platform inspired by Airbnb, built with Node.js, Express.js, MongoDB, and EJS. The application allows users to explore destinations, create and manage property listings, upload images, authenticate accounts, and interact through a clean responsive UI focused on smooth travel discovery.",
     tech: [
